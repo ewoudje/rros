@@ -1,0 +1,8 @@
+[package]
+name = "ros-mem"
+version = "0.2.0"
+authors = ["ewoudje <ewoud.dierickx@hotmail.be>"]
+edition = "2018"
+
+[dependencies]
+x86_64 = "0.6.0"

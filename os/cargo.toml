@@ -1,0 +1,28 @@
+[package]
+name = "rros"
+version = "0.2.0"
+authors = ["ewoudje <ewoud.dierickx@hotmail.be>"]
+edition = "2018"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[package.metadata.bootimage]
+default-target = "x86_64-rros.json"
+test-args = [
+    "-device", "isa-debug-exit,iobase=0xf4,iosize=0x04", "-serial", "mon:stdio", "-s", "-S"
+]
+
+[dependencies]
+ros-lib = { path = "../lib" }
+ros-mem = { path = "../mem" }
+rosd-serial = { path = "../drivers/serial" }
+rosd-vga = { path = "../drivers/vga" }
+bootloader = { version = "0.6.0", features = ["recursive_page_table"] }
+x86_64 = "0.6.0"
+
+[build]
+target = "x86_64-rros.json"

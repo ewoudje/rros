@@ -1,0 +1,9 @@
+[package]
+name = "rosd-serial"
+version = "0.1.0"
+authors = ["ewoudje <ewoud.dierickx@hotmail.be>"]
+edition = "2018"
+
+[dependencies]
+ros-lib = { path = "../../lib" }
+uart_16550 = "0.2.0"

@@ -1,0 +1,10 @@
+[package]
+name = "ros-alloc"
+version = "0.2.0"
+authors = ["ewoudje <ewoud.dierickx@hotmail.be>"]
+edition = "2018"
+
+[dependencies]
+ros-mem = { path = "../mem" }
+x86_64 = "0.6.0"
+spin = "0.4.9"
